@@ -1,0 +1,70 @@
+
+#include <iostream>
+#include <string>
+#include <cmath>
+
+
+using namespace std;
+
+int main ()
+{
+/* Виконання завдання 1 варіант 13, студент групи 151, Яковенко Матвій Сергійович*/
+
+float R, a, x, b;
+float cs = cos(x);
+float cs3 = pow(cs, 3);
+cout << "enter a, x, b" << endl;
+cin >> a >> x >> b;
+
+R = (a/x-a) + (pow(b ,x)+cs3 / (pow(log(a), 3) + 4,5));
+cout << "R= " << R << endl;
+}
+
+/*завдання 3 варіант 13, група 151, Яковенко Матвій Сергійович*/
+/*(1 + 2) * (1 + 2 + 3) * ... * (1 + 2 + ...+ 10).*/
+
+{
+    const int n = 10;
+    long long u = 1;
+    for (int i = 1; i <= n; i++)
+        u *= (i * (i + 1)) / 2;
+    cout << u << endl;
+    return 0;
+}
+
+/*1 + 2 + 4 + 8 + ... + 256*/
+
+{
+    int sum = 1;
+ 
+    for (int i = 1; i <=8; ++i)
+        sum += pow(2, i);
+ 
+    cout << "Sum = " << sum << endl;
+ 
+    return 0;
+}
+
+
+/* Завдання 4 варіант 13, группа 151, Яковенко Матвій Сергійович*/
+const int sz = 15;
+int a[sz], mn, mx = 0;
+ 
+
+ 
+int main() {
+    cout << "Enter array elements: ";
+    for (int i = 0; i < sz; ++ i) {
+        cin >> a[i];
+        if (a[i] > mx) mx = a[i];
+    }
+    mn = mx;
+    for (int i = 0; i < sz; ++ i) {
+        if (a[i] < mn) mn = a[i];
+    }
+    cout << "  max=" << mx;
+    cout << "  min=" << mn; 
+    cout << "  Sum min and max arrat elements = " << mx + mn;
+    cout << "  Dist min and max arrat elements = " << mx - mn;
+    return 0;
+}
